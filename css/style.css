@@ -1,0 +1,654 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html,body{
+    font-size: 50%;
+}
+*,::after,::before{box-sizing:border-box}
+html{
+    scroll-behavior: smooth;
+}
+body {
+    font-family: "Sitka";
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.4;
+    text-decoration: none;
+    background-color: rgb(233, 233, 233);
+} 
+/* .main{
+    margin-right:5px;
+    margin-left:5px;
+} */
+/* re usable variable */
+:root{
+    --secondary-color: #794afa;
+    --primary-color: #ff6b6b;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    -webkit-tap-highlight-color: transparent;
+}
+ul {
+   list-style: none;
+}
+/* h1,h2,h3,h4{
+    font-family: 'Poppins';
+} */
+
+/* re usable classes */
+.container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 0.938em;
+}
+.flexitem {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+   }
+.icon-small{
+    font-size: 1.25em;
+    margin: auto;
+}
+.icon-large{
+    font-size: 1.75em;
+    padding: 0.75em 0 0;
+}
+.mid-header .nav-bar{
+    display: block;
+}
+i{
+    cursor: pointer;
+}
+/* top-header */
+#menu-btn{
+    padding: 5px 5px 5px 0px;
+    z-index: 100;
+}
+#logout-btn{
+    padding: 1px;
+    border-radius: 7px;
+    /* border: solid 1px black; */
+    /* background-color: black; */
+    /* color: white; */
+}
+.top-header .wrapper{
+    justify-content: space-between;
+}
+.top-header .wrapper ul li a{
+    margin-right: 2em;
+}
+.top-header .wrapper ul li a:hover{
+    color:var(--secondary-color) ;
+}
+
+.top-header li{
+    position: relative;
+}
+.top-header ul ul{
+    position: absolute;
+    line-height: 2em;
+    z-index: 1;
+    display: none;
+}
+.top-header .right ul ul li a{
+    padding: 0.25em 0;
+}
+.top-header li:hover ul{
+    display: block;
+    background-color: white;
+    /* background-color: #cecece; */
+}
+
+.bxs-user-circle{
+    font-size: large;
+    position: relative;
+    top: 3px;
+}
+/* mid-header */
+.mid-header{
+    /* margin-top: 0.5em; */
+    background-color: bisque;
+}
+.mid-header .desktop-hide{
+    display: none;
+}
+.mid-header .container .flexitem{
+    justify-content: space-between;
+}
+.mid-header .left ul{
+    gap:1em;
+}
+.mid-header .logo{
+    font-size: 30px;
+   margin-right: 1em;
+}
+.mid-header .logo .circle{
+    position: absolute;
+    width: 38px;
+    height: 38px;
+    border-radius: 50% 100% ;
+    background-color:var(--secondary-color);
+    opacity: 0.4;
+    z-index: 1;
+}
+.mid-header ul ul{
+    position: absolute;
+    line-height: 2em;
+    z-index: 20;
+    display: none;
+    padding: 5px;
+}
+.mid-header .all:hover #main-ul{
+    z-index: 20;
+    position: absolute;
+    display: block;
+    background-color: white;
+}
+.mid-header #mens:hover #mens-item{
+    z-index: 20;
+    position: absolute;
+    display: block;
+    background-color: white;
+}
+.mid-header #womens:hover #womens-item{
+    z-index: 20;
+    position: absolute;
+    display: block;
+    background-color: white;
+}
+.mid-header #beauty:hover #beauty-item{
+    z-index: 20;
+    position: absolute;
+    display: block;
+    background-color: white;
+}
+.mid-header #mobiles:hover #mobiles-item{
+    z-index: 20;
+    position: absolute;
+    display: block;
+    background-color: white;
+}
+.mid-header #electronics:hover #electronics-item{
+    z-index: 20;
+    position: absolute;
+    display: block;
+    background-color: white;
+}
+.mid-header #sports:hover #sports-item{
+    z-index: 20;
+    position: absolute;
+    display: block;
+    background-color: white;
+}
+.mid-header #shoes:hover #shoes-item{
+    z-index: 20;
+    position: absolute;
+    display: block;
+    background-color: white;
+}
+.mid-header ul ul ul {
+    position: absolute;
+    top: 0;
+    left: 100px;
+    line-height: 2em;
+    z-index: 20;
+    display: none;
+}
+.mid-header .all ul{
+    width: 100px;
+}
+/* .mid-header ul li ul li ul:hover li {
+    display: block;
+} */
+
+/* all ends here */
+.mid-header .left .fly-item{
+    background-color:var(--primary-color) ;
+    height: 10px;
+    font-size: 10px;
+    padding: 3px;
+    text-align: center;
+    line-height: 10px;
+    color: white;
+    border-radius: 3px;
+    position: relative;
+    bottom: 8px;
+    box-sizing: content-box;
+}
+.mid-header .right ul{
+    gap:2em;
+}
+.icon-text{
+    text-align: center;
+    font-size: 10px;
+}
+.mid-header .right .fly-item .item-number{
+    background-color: red;
+    border-radius: 200%;
+    padding: 2px;
+    font-size: 10px;
+    position: relative;
+    bottom: 8px;
+    right: 8px;
+    /* height: 8px; */
+    text-align: center;
+    line-height: 10px;
+    color: white;
+}
+.mid-header li:hover{
+   color: rgb(83, 83, 83);
+}
+.mid-header .search-bar{
+    width: 60rem;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.mid-header .search-bar form{
+    position: relative;
+}
+.mid-header .search-bar span{
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    opacity: 0.5;
+    font-size: 18px;
+}
+.mid-header .search-bar button{
+    position: absolute;
+    right: 0;
+    padding: 8px 20px;
+    border-radius: 7px;
+    border: none;
+    background-color: var(--secondary-color);
+    color: white;
+    cursor: pointer;
+
+}
+.mid-header .search-bar button:hover{
+    opacity: 0.7;
+
+}
+
+
+.mid-header .search-bar input{
+    height: 2em;
+    padding: 0 20% 0 34px;
+    border: 0;
+    outline: 0;
+    width: 100%;
+    border-radius: 7px;
+    font-size: 1em;
+  
+}
+#contact-phone{
+    position: absolute;
+    top: 4px;
+    right:-16px;
+    animation: phone-ring 1s linear infinite;
+}
+@keyframes phone-ring {
+    0% {
+        transform: rotate(0deg);
+    }
+    25% {
+        transform: rotate(20deg);
+    }
+    50% {
+        transform: rotate(0deg);
+    }
+    75% {
+        transform: rotate(-20deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+.category-box{
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+.category-box .category-section{
+    position: relative;
+}
+#category-text{
+    position: absolute;
+    font-weight:bolder;
+    font-size: 35px;
+    background: rgba(255, 255, 255, 0.8);
+    top:70%;
+    width:100%;
+    text-align: center;
+    
+}
+/* top-main */
+.top-main{
+    /* margin-top: 20px; */
+    background-color: white;
+}
+.top-main .upcoming{
+    width: 100%;
+    overflow: hidden;
+    height: 100%;
+    text-align: center;
+    margin-right: 20px;
+}
+#sale-animate{
+    animation: sale-animate 5s infinite linear;
+}
+@keyframes sale-animate{
+    0%{
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(1.05);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+.top-main .upcoming img{
+    margin-top: 20px;
+    cursor: pointer;
+    width: auto;
+    height: 50vh;
+}
+.top-main .slider{
+    display: flex;
+    width: 100%;
+    height: 94vh;
+    position: relative;
+    overflow: hidden;
+}
+.top-main .slider img{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transition: 1s;
+    cursor: pointer;
+}
+.top-main .slider button{
+    font-size: 80px;
+    z-index: 10;
+    position: absolute;
+    top: 35vh;
+    color: white;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+.top-main .slider #previous{
+    left: 0;
+}
+.top-main .slider #next{
+    right: 0;
+}
+
+/* main-tranding */
+.main-tranding{
+    background-color: white;
+}
+.main-tranding h1{
+    font-family: "Gabriola";
+    text-align: center;
+}
+
+.main-tranding .all-card{
+    margin-left: 10px;
+    margin-right: 10px;
+    display: grid;
+    grid-auto-flow: column;
+    overflow-x: scroll;
+    scroll-behavior: smooth;
+    gap: 3em;
+}
+main p{
+    font-family: "Gadugi";
+}
+#add-to-cart{
+    position: absolute;
+    color: black;
+    top: 1em;
+    right: 1em;
+    background-color: white;
+    border: solid 2px white;
+    border-radius: 10px;
+    padding: 5px 5px 0 5px;
+}
+#add-to-cart i{
+    font-size: 20px;
+}
+#add-to-cart:hover{
+    opacity: 0.7;
+}
+.main-tranding .card{
+    position: relative;
+    height: auto;
+	width: 270px;
+	/* border-radius: 7px; */
+	overflow: hidden;
+    background-color:white;
+}
+
+.main-tranding .card img{
+    width: 100%;
+	height: 360px;
+}
+.main-tranding .card p{
+   align-content: center;
+}
+.main-tranding .card p{
+    padding: 10px;
+}
+/*main-feature  */
+#add-5-to-cart{
+    position: absolute;
+    color: black;
+    top: 1em;
+    right: 1em;
+    background-color: white;
+    border: solid 2px white;
+    border-radius: 10px;
+    padding: 5px 5px 0 5px;
+}
+#add-5-to-cart i{
+    font-size: 20px;
+}
+#add-5-to-cart:hover{
+    opacity: 0.8;
+}
+.main-feature .feature-card img{
+    height: 360px;
+    width: 270px;
+}
+.main-feature{
+    /* display:flex; */
+    background-color:white;
+}
+.main-feature .all-feature-card{
+    display:flex;
+    flex-wrap:wrap;
+    gap:20px;
+    justify-content:space-around;
+}
+.main-feature .all-feature-card .feature-card{
+    /* background-color:rgb(220, 218, 218); */
+    /* border-radius: 7px; */
+    overflow: hidden;
+    position: relative;
+
+}
+.main-feature h1{
+    font-family: "Gabriola";
+    text-align: center;
+}
+
+/* main-fade */
+main{
+    background: white;
+}
+.main-fade{
+    margin-left: 1%;
+    width: 98%;
+    height: 90vh;
+    position: relative;
+    margin-bottom: 0.3em;
+    background: white;
+}
+.main-fade .fade-img img{
+    width: 100%;
+	height: 90vh;	
+    position: absolute;
+    top: 0;
+}
+.main-fade .fade-scbar{
+    height: 150px;
+	width: 5px;
+	background: white;
+	top:50px;
+	margin-top:5px; 
+	position: relative;
+    left:94% ;
+	
+}
+.main-fade .fade-text{
+    top:100px;
+    left: 5%;
+	position: absolute;
+	font-size: 50px;
+	color:white;
+}
+.main-fade button{
+    position:absolute;
+    left:20vh;
+    font-size:20px;
+    padding:10px;
+    border:2px solid white;
+    color:white;
+    background:transparent;
+    cursor: pointer;
+}
+
+/* footer */
+footer{
+    background-color: black;
+}
+footer .back-to-top-btn{
+    text-align: center;
+}
+footer .back-to-top-btn button{
+    margin-top: 10px;
+      padding: 10px 40px;
+      color: white;
+      border-radius: 7px;
+      border: none;
+      background-color: var(--secondary-color);
+      cursor: pointer;
+}
+footer .back-to-top-btn button:hover{
+    opacity: 0.7;
+}
+#back-top:hover{
+    color: white;
+}
+footer .social-links{
+    text-align: center;
+    height: 15vh;
+}
+footer .social-links a{
+    font-size: 30px;
+    margin-left: 15px;
+    color: white;
+}
+footer a:hover{
+    color:var(--secondary-color);
+
+}
+footer .footer-main{
+    display: flex;
+    justify-content: space-between;
+    /* text-align: center; */
+    color: white;
+}
+footer .footer-main .footer-main1{
+    margin-left: 2em;
+    display: flex;
+    gap: 2em;
+} 
+footer .footer-main .footer-main1 .main1-heading{
+    color: rgb(168, 168, 168);
+}
+footer .footer-main .footer-main2{
+    margin-right: 3em;
+}
+footer .footer-bottom{
+    text-align: center;
+    height: 40px;
+}
+footer .footer-bottom a{
+    color: white;
+    margin-right: 10%;
+}
+   /* responsive */
+   @media screen and (max-width:992px) {
+    .container{
+        padding: 0 2em;
+    }
+    .mid-header .desktop-hide{
+        display: block;
+    }
+    .mid-header .nav-bar{
+        position: absolute;
+        left: 0;
+        width: 30%;
+        padding: 1rem 3%;
+        display: none;
+    }
+    .top-header{
+        display: none;
+    }
+    a.trigger.desktop-hide {
+        position: absolute;
+        left: 5px;
+        display: block;
+    }
+    .mid-header .nav-bar .flexitem{
+        position: absolute;
+        width: 100%;
+        top: 37px;
+        left: 0;
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+    }
+    main .top-main .flexitem{
+        flex-direction: column-reverse;
+    }
+    #sports{
+        display: none;
+    }
+    footer .footer-main{
+        flex-wrap: wrap;
+    }
+    .mid-header .logo{
+        margin-right: 0px;
+    }
+    
+}
+@media screen and (max-width:500px) {
+    .mid-header .search-bar button{
+        display: none;
+    }
+    
+}
+.mid-header .active{
+    display: block;
+    z-index: 10;
+}
